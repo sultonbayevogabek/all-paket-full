@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All Paket</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="order-modal">
+    <div class="order-modal__content">
+        <h2 class="section-title">Login as admin</h2>
+        <form class="order-modal__form" action="/admin" method="POST">
+            <label for="login">
+                <span>Login: </span>
+                <input id="login" type="text" name="login" required minlength="5" maxlength="20">
+            </label>
+            <label for="password">
+                <span>Password: </span>
+                <input id="password" type="password" name="password" required/>
+            </label>
+            <% if (error) { %>
+                <label class="error-message"><%= error %></label>
+            <% } %>
+            <button class="order-btn" type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+<!--JAVASCRIPT FILES-->
+<script src="../public/scripts/bundle.js"></script>
+</body>
+</html>
